@@ -4,7 +4,9 @@
         "userId": 4,
         "date": "2024-05-24T04:56:39.872319",
         "products": [
-            {"productId": 6, "quantity": 10}
+            {"productId": 6, "quantity": 10},
+            {"productId": 4, "quantity": 5},
+            {"productId": 3, "quantity": 8}
         ]
     },
     {
