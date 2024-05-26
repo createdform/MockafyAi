@@ -70,7 +70,7 @@ npx mockafy
 
 This will run the CLI tool you can use the e-commerce store that comes with the example project or you can create your own data through GPT-3.5 turbo (included as part of the cli).
 
-![HomeScreen.png](..%2Fexample%2Fpublic%2FHomeScreen.png)
+![https://github.com/createdform/MockafyAi/blob/main/mockafy/..%2Fexample%2Fpublic%2FHomeScreen.png](..%2Fexample%2Fpublic%2FHomeScreen.png)
 
 ### Example
 
