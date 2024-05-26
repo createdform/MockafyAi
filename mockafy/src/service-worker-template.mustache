@@ -2,11 +2,19 @@
 
 self.addEventListener('install', event => {
 console.log('Service Worker installing.');
+event.waitUntil(self.skipWaiting());
 // Add caching logic here
 });
 
 self.addEventListener('activate', event => {
 console.log('Service Worker activating.');
+event.waitUntil(self.clients.claim());
+
+returnList('users').then(response => {
+response.json().then(users => {
+console.log('list of users', users);
+});
+});
 // Add cache cleanup logic here
 });
 
@@ -19,7 +27,7 @@ const url = new URL(event.request.url);
 
 // Dynamically generated routes
 const registeredRoutes = [{{#routes}}"{{{.}}}", {{/routes}}];
-console.log('Fetching:', event.request.url); // Add fetch event handling logic here
+console.log('Fetching:', event.request.url);
 
 if (registeredRoutes.some(route => url.pathname.startsWith(route))) {
 const { id, path, entityName, entityId, length } = getSegments(url);
@@ -32,6 +40,12 @@ event.respondWith(findItem(path, entityName, entityId));
 } else if (length === 5) {
 event.respondWith(findItem(path, entityName, entityId, id));
 }
+}
+});
+
+self.addEventListener('message', event => {
+if (event.data.action === 'skipWaiting') {
+self.skipWaiting();
 }
 });
 
@@ -50,13 +64,12 @@ items = data.filter(item => item[entityName] == entityId && item.id == id);
 return jsonResponse(JSON.stringify(items), headers);
 }
 if (entityName) {
-items = data.find(item => item.id == entityId)[entityName]
+items = data.find(item => item.id == entityId)[entityName];
 if (!items) {
 return returnList(entityName)
-.then(response => {
-return response.json().then((result) => {
+.then(response => response.json())
+.then(result => {
 return result.filter(i => i[path.slice(0, -1) + "Id"] == entityId);
-})
 })
 .then(filteredItems => jsonResponse(JSON.stringify(filteredItems), headers));
 }
@@ -124,3 +137,4 @@ function jsonResponse(json, headers) {
 const blob = new Blob([json], { type: 'application/json' });
 return new Response(blob, { headers });
 }
+

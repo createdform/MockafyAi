@@ -1977,10 +1977,10 @@ minimatch@^3.1.1:
   dependencies:
     brace-expansion "^1.1.7"
 
-mockafy@^1.1.2:
-  version "1.1.2"
-  resolved "https://registry.yarnpkg.com/mockafy/-/mockafy-1.1.2.tgz#f409ea16b35901240d352a2d88d098e5bfff6ab5"
-  integrity sha512-ZMMO6US/hYvdIo6XulFzDBRSay9sckq4C5mv4pWy3COA6b57vYEZNy7keWGUCVM0OcWY4J1Hk+a3sF9mV7yXog==
+mockafy@^1.2.3:
+  version "1.2.3"
+  resolved "https://registry.yarnpkg.com/mockafy/-/mockafy-1.2.3.tgz#486953f63f07f23e18ed46d048bff31605f98555"
+  integrity sha512-jnJQXywmYWFi9mWDrBY8OQSbxf0PP2Cbf1e7Xr9d2tYvOdjhVwvv0r/hoiFw/l78+SNPPU48X9RR7AyRMbrwng==
   dependencies:
     "@babel/cli" "^7.24.6"
     "@babel/core" "^7.24.6"
