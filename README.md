@@ -1,0 +1,64 @@
+# MockafyAi 
+
+#### Current supports NEXT.js, this could very easily be extended to other js frameworks. 
+
+### What does it do?
+
+Standup a backend without actually running a server!
+
+This tool will create a service worker that will act as a backend for your frontend application. This will allow you to quickly mock out a backend for your frontend application.
+
+### Why would I want that?
+
+If you are a frontend focused developer wanting to build a demo site for to sell a customer on your proposal or if you're a building a portfolio website where you would prefer to show off your front end prowess and not have to worry about standing up a server.
+
+### Who is this for?
+
+This is for developers hoping to quickly mock out a backend, without standing up a server.
+
+### How does it work?
+
+This tool uses a very basic nested router to create a mocked backend. You can define your data model in a json file and then run the tool to create a mocked backend.
+
+
+### How do I use it?
+
+Using yarn
+
+```Bash
+ yarn add mockafy 
+```
+
+Using npm
+
+```Bash
+ npm install mockafy
+```
+
+Once included you will need to run the included MockafyAi CLI
+
+```Bash
+npx mockafy
+```
+This will move the necessary files for the service worker (mocked backend) to work as well as the mocked data files into your public directory.
+
+
+### Example
+
+There is an example next.js project in the example folder.
+
+### Batteries included data model
+
+Don't want to use AI on this? That's fine. I won't judge you.
+You can either manually create your json files in a similar sort of structure, or
+there is a demo data model included for a basic ecommerce store. This includes: 
+
+- Users
+- Products
+- Cart 
+
+Where users can have many carts and products can be in many carts.
+
+### Limitations
+
+- This currently produces a readonly api for finding a piece of data by id, listing data and getting relational data. This project has a very crude nested router implementation, so feel free to submit a pull request to make it less crude :) 

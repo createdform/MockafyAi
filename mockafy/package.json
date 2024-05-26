@@ -1,0 +1,28 @@
+{
+  "name": "mockafy",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "bin": {
+    "mockafy-cli": "bin/mockafy-cli"
+  },
+  "scripts": {
+    "build": "babel src --out-dir dist && yarn tsc"
+  },
+  "keywords": [],
+  "author": "devinreeks",
+  "license": "MIT",
+  "dependencies": {
+    "@babel/cli": "^7.24.6",
+    "@babel/core": "^7.24.6",
+    "@babel/preset-env": "^7.24.6",
+    "@babel/preset-react": "^7.24.6",
+    "@babel/preset-typescript": "^7.24.6",
+    "@types/react": "^18.3.3",
+    "@types/react-dom": "^18.3.0",
+    "mustache": "^4.2.0",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "typescript": "^5.4.5"
+  }
+}

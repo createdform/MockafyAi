@@ -1,0 +1,40 @@
+#!/usr/bin/env node
+
+const fs = require('fs');
+const path = require('path');
+class MockAfyCLI {
+
+    routePrefix = '';
+    constructor() {
+        this.init();
+    }
+
+    init() {
+        this.copyDemoData()
+        this.copyServiceWorker();
+    }
+
+    copyDemoData() {
+        this.copyFiles('../demo-data/products.json', 'public/demo-data/products.json', 'Products copied successfully');
+        this.copyFiles('../demo-data/cart.json', 'public/demo-data/cart.json', 'Cart copied successfully');
+        this.copyFiles('../demo-data/users.json', 'public/demo-data/users.json', 'Users copied successfully');
+    }
+
+
+    copyServiceWorker() {
+        this.copyFiles('../dist/service-worker.js', 'public/service-worker.js', 'Service Worker copied successfully');
+    }
+
+    copyFiles(sourcePath, destinationPath, message) {
+        const source = path.join(__dirname, sourcePath);
+        const destination = path.join(process.cwd(), destinationPath);
+        if (!fs.existsSync(path.dirname(destination))) {
+            fs.mkdirSync(path.dirname(destination), { recursive: true });
+        }
+        fs.copyFileSync(source, destination);
+       console.log(message)
+    }
+
+}
+
+new MockAfyCLI()

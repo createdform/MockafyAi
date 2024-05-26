@@ -1,0 +1,18 @@
+{
+  "compilerOptions": {
+    "target": "ES6",
+    "module": "ESNext",
+    "jsx": "react",
+    "strict": true,
+    "declaration": true,       // Emit .d.ts files
+    "declarationDir": "./dist/types", // Output directory for .d.ts files
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    "outDir": "./dist",        // Optional: Specify output directory for compiled files
+    "baseUrl": ".",            // Optional: Base directory to resolve non-relative module names
+    "allowJs": true            // Optional: Allow JavaScript files to be compiled
+  },
+  "include": ["src/**/*"],
+  "exclude": ["node_modules"]
+}
