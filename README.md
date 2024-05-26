@@ -42,6 +42,30 @@ npx mockafy
 ```
 This will move the necessary files for the service worker (mocked backend) to work as well as the mocked data files into your public directory.
 
+You will then need to add the service worker to the entrypoint to your application. This is usually in the pages/_app.js file in a next.js project.
+
+```Javascript
+import React from 'react';
+import styles from "./page.module.css";
+import dynamic from 'next/dynamic';
+import Image from 'next/image';
+import Description from '@/app/_components/Description';
+
+const MockedBackEnd = dynamic<{run: boolean}>(() =>
+    import('mockafy/src/worker/MockAfyWorker').then((mod) => mod.default), { ssr: false });
+
+
+
+export default function Home() {
+    const run = true;
+    return (
+        <main className={styles.main}>
+            <MockedBackEnd run={run} />
+        </main>
+    );
+}
+
+```
 
 ### Example
 
@@ -62,3 +86,4 @@ Where users can have many carts and products can be in many carts.
 ### Limitations
 
 - This currently produces a readonly api for finding a piece of data by id, listing data and getting relational data. This project has a very crude nested router implementation, so feel free to submit a pull request to make it less crude :) 
+
