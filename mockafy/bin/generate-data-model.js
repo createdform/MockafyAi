@@ -77,18 +77,18 @@ class GenerateDataModel {
             });
 
             const generatedData = response.choices[0].message.content;
-            console.log("Generated Data:", generatedData);
-
             // Parse the generated data and write to files
             const data = JSON.parse(generatedData);
             const demoDataDir = path.join(__dirname, '../generated-data');
             if (!fs.existsSync(demoDataDir)) {
                 fs.mkdirSync(demoDataDir);
             }
-
+            const entities = []
             for (const [entity, content] of Object.entries(data)) {
+                entities.push(entity);
                 fs.writeFileSync(path.join(demoDataDir, `${entity}.json`), JSON.stringify(content, null, 2));
             }
+            this.utility.generateServiceWorker(entities);
             this.utility.loadingSpinner().stop();
         } catch (error) {
             this.utility.loadingSpinner().stop();

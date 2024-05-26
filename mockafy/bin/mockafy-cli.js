@@ -7,7 +7,7 @@ const GenerateDataModel = require('./generate-data-model');
 
 class MockAfyCLI {
     routePrefix = '';
-
+    defaultRoutes = ['/users', '/products', '/cart'];
     constructor() {
         this.init();
     }
@@ -21,6 +21,7 @@ class MockAfyCLI {
         const { default: fs } = await import('fs-extra');
 
         await this.utility.init();
+        this.utility.generateServiceWorker()
         await this.defaultDataModel.init();
         await this.generateDataModel.init();
         this.fs = fs;  // Store fs-extra in this instance
@@ -33,6 +34,7 @@ class MockAfyCLI {
         this.utility.outputLineSpace(2);
         this.utility.askUserIfHappyWithDefault().then((result) => {
             if (result) {
+                this.utility.generateServiceWorker(this.defaultRoutes)
                 this.copyDefaultData();
                 this.copyServiceWorker();
             } else {

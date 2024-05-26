@@ -1,13 +1,17 @@
+const fs = require('fs');
+const path = require('path');
 class Utility {
     async init() {
         const { default: chalk } = await import('chalk');
         const { default: inquirer } = await import('inquirer');
         const { default: ora } = await import('ora');
         const { default: cliSpinners } = await import('cli-spinners');
+        const { default: mustache } = await import('mustache');
         this.ora = ora;
         this.cliSpinners = cliSpinners;
         this.inquirer = inquirer;
         this.chalk = chalk;
+        this.mustache = mustache;
     }
 
     welcome() {
@@ -89,6 +93,17 @@ class Utility {
             text: 'Loading',
             spinner: this.cliSpinners.dots
         })
+    }
+
+    generateServiceWorker(entityRoutes) {
+        const data = {
+            routes: entityRoutes
+        };
+        const template = fs.readFileSync(path.join(process.cwd(), '../src/service-worker-template.mustache'), 'utf-8');
+
+        const output = this.mustache.render(template, data);
+        fs.writeFileSync(path.join(process.cwd(), '../dist/service-worker.js'), output);
+        this.outputMessage('Service Worker generated successfully!', 'green');
     }
 
     outputMessage(message, colour) {
