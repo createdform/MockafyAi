@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "bin": {
-    "mockafy-cli": "bin/mockafy-cli"
+    "mockafy-cli": "bin/mockafy-cli.js"
   },
   "scripts": {
     "build": "babel src --out-dir dist && yarn tsc"

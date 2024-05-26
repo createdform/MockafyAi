@@ -99,10 +99,11 @@ class Utility {
         const data = {
             routes: entityRoutes
         };
-        const template = fs.readFileSync(path.join(process.cwd(), '../src/service-worker-template.mustache'), 'utf-8');
+
+        const template = fs.readFileSync(path.join(__dirname, '../src/service-worker-template.mustache'), 'utf-8');
 
         const output = this.mustache.render(template, data);
-        fs.writeFileSync(path.join(process.cwd(), '../dist/service-worker.js'), output);
+        fs.writeFileSync(path.join(process.cwd(), 'public/service-worker.js'), output);
         this.outputMessage('Service Worker generated successfully!', 'green');
     }
 

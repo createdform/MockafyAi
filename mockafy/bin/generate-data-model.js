@@ -65,7 +65,7 @@ class GenerateDataModel {
           users are attendees with each record having an id, and the id in bookings becomes attendeeId.
           The products need to match the business model description as well, so for events the products could be types of tickets.
           change the name of each entity to match the business model of a ${this.prompt} return as json formatted data 
-          that can be parsed immediately and called by my code
+          that can be parsed immediately and called by my code. Entity should be lower case for example: attendees, tickets, bookings.
         `;
 
         // Call OpenAI API
@@ -79,13 +79,13 @@ class GenerateDataModel {
             const generatedData = response.choices[0].message.content;
             // Parse the generated data and write to files
             const data = JSON.parse(generatedData);
-            const demoDataDir = path.join(__dirname, '../generated-data');
+            const demoDataDir = path.join(process.cwd(), 'public/demo-data');
             if (!fs.existsSync(demoDataDir)) {
                 fs.mkdirSync(demoDataDir);
             }
             const entities = []
             for (const [entity, content] of Object.entries(data)) {
-                entities.push(entity);
+                entities.push(`/${entity}`);
                 fs.writeFileSync(path.join(demoDataDir, `${entity}.json`), JSON.stringify(content, null, 2));
             }
             this.utility.generateServiceWorker(entities);
