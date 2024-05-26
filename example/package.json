@@ -9,7 +9,8 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "mockafy": "file:../mockafy",
+    "axios": "^1.7.2",
+    "mockafy": "^1.1.2",
     "next": "14.2.3",
     "react": "^18",
     "react-dom": "^18"

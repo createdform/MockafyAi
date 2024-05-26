@@ -1163,18 +1163,6 @@
     "@swc/counter" "^0.1.3"
     tslib "^2.4.0"
 
-"@tanstack/query-core@5.38.0":
-  version "5.38.0"
-  resolved "https://registry.yarnpkg.com/@tanstack/query-core/-/query-core-5.38.0.tgz#36e0cd309cdbd75b4ff3fa81cdb3839befc7d6f6"
-  integrity sha512-QtkoxvFcu52mNpp3+qOo9H265m3rt83Dgbw5WnNyJvr83cegrQ7zT8haHhL4Rul6ZQkeovxyWbXVW9zI0WYx6g==
-
-"@tanstack/react-query@^5.39.0":
-  version "5.39.0"
-  resolved "https://registry.yarnpkg.com/@tanstack/react-query/-/react-query-5.39.0.tgz#a5d8d72c12f8d4f036c62b6f829c76b37af53f08"
-  integrity sha512-zc0WnyEffyTgG+myLv8cY2tJOUT6jOprCiprpbMqylCaCFipSDUPCYCt2AC+qxgk2CFuqiI/fjb1u5/HhLkrPg==
-  dependencies:
-    "@tanstack/query-core" "5.38.0"
-
 "@types/node-fetch@^2.6.4":
   version "2.6.11"
   resolved "https://registry.yarnpkg.com/@types/node-fetch/-/node-fetch-2.6.11.tgz#9b39b78665dae0e82a08f02f4967d62c66f95d24"
@@ -1989,8 +1977,10 @@ minimatch@^3.1.1:
   dependencies:
     brace-expansion "^1.1.7"
 
-"mockafy@file:../mockafy":
-  version "1.0.0"
+mockafy@^1.1.2:
+  version "1.1.2"
+  resolved "https://registry.yarnpkg.com/mockafy/-/mockafy-1.1.2.tgz#f409ea16b35901240d352a2d88d098e5bfff6ab5"
+  integrity sha512-ZMMO6US/hYvdIo6XulFzDBRSay9sckq4C5mv4pWy3COA6b57vYEZNy7keWGUCVM0OcWY4J1Hk+a3sF9mV7yXog==
   dependencies:
     "@babel/cli" "^7.24.6"
     "@babel/core" "^7.24.6"
