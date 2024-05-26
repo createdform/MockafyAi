@@ -76,6 +76,11 @@ This will run the CLI tool you can use the e-commerce store that comes with the 
 
 There is an example next.js project in the example folder.
 
+or hosted here:
+
+[mockafy.com](https://www.mockafy.com/)
+
+
 ### Batteries included data model
 
 Don't want to use AI on this? That's fine. I won't judge you.

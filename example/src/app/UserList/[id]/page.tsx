@@ -94,12 +94,15 @@ const styles = {
     },
     userInfo: {
         marginBottom: '20px',
+        color: '#333',
     },
     addressInfo: {
         marginBottom: '20px',
+        color: '#333',
     },
     geolocation: {
         marginBottom: '20px',
+        color: '#333',
     },
     sectionTitle: {
         fontSize: '1.5rem',

@@ -71,6 +71,10 @@ export default function Home() {
 
 There is an example next.js project in the example folder.
 
+or hosted here: 
+
+[mockafy.com](https://www.mockafy.com/)
+
 ### Batteries included data model
 
 Don't want to use AI on this? That's fine. I won't judge you.
