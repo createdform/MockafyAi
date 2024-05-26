@@ -10,7 +10,7 @@
   "scripts": {
     "build": "babel src --out-dir dist && yarn tsc"
   },
-  "keywords": [],
+  "keywords": ["ai", "openai", "mock", "backend", "frontend", "mockafy", "service", "worker", "fake", "data"],
   "author": "devinreeks",
   "license": "MIT",
   "devDependencies": {
