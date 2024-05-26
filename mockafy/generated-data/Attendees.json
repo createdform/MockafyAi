@@ -1,0 +1,107 @@
+[
+  {
+    "id": 1,
+    "email": "gabrielevans@armstrong.biz",
+    "username": "mchavez",
+    "password": "Uh6Q5AxGt_",
+    "name": {
+      "firstname": "Diana",
+      "lastname": "Lara"
+    },
+    "address": {
+      "city": "East Julieside",
+      "street": "Mitchell Expressway",
+      "number": 350,
+      "zipcode": "29365",
+      "geolocation": {
+        "lat": "-18.3801345",
+        "long": "-110.840872"
+      }
+    },
+    "phone": "518-379-2164"
+  },
+  {
+    "id": 2,
+    "email": "ssmith@thompson-hunt.com",
+    "username": "anita91",
+    "password": "_4Si_w&dwr",
+    "name": {
+      "firstname": "David",
+      "lastname": "Liu"
+    },
+    "address": {
+      "city": "New Michelleside",
+      "street": "Jackson Station",
+      "number": 6904,
+      "zipcode": "37014",
+      "geolocation": {
+        "lat": "-6.2435225",
+        "long": "26.535675"
+      }
+    },
+    "phone": "648-227-6251"
+  },
+  {
+    "id": 3,
+    "email": "whitneymartinez@bowman.com",
+    "username": "mwright",
+    "password": "(0HSw$pz(0",
+    "name": {
+      "firstname": "Brittany",
+      "lastname": "Davis"
+    },
+    "address": {
+      "city": "Andreastad",
+      "street": "Krista Manors",
+      "number": 862,
+      "zipcode": "64684",
+      "geolocation": {
+        "lat": "29.5455355",
+        "long": "-129.132772"
+      }
+    },
+    "phone": "224-240-3699"
+  },
+  {
+    "id": 4,
+    "email": "dmartin@gmail.com",
+    "username": "jasonmcguire",
+    "password": "%1BXZG*Rcc",
+    "name": {
+      "firstname": "Michael",
+      "lastname": "Davis"
+    },
+    "address": {
+      "city": "Dennistown",
+      "street": "Adam Prairie",
+      "number": 4158,
+      "zipcode": "17441",
+      "geolocation": {
+        "lat": "37.6507105",
+        "long": "-129.862567"
+      }
+    },
+    "phone": "625-845-9986x47704"
+  },
+  {
+    "id": 5,
+    "email": "erincampos@morris.org",
+    "username": "christina48",
+    "password": "OCHd)Aax)8",
+    "name": {
+      "firstname": "Megan",
+      "lastname": "Turner"
+    },
+    "address": {
+      "city": "West Helenborough",
+      "street": "Sanchez Plain",
+      "number": 4979,
+      "zipcode": "62330",
+      "geolocation": {
+        "lat": "33.9376265",
+        "long": "65.934619"
+      }
+    },
+    "phone": "001-193-156-6108x634"
+  }
+]

@@ -2,6 +2,10 @@ class Utility {
     async init() {
         const { default: chalk } = await import('chalk');
         const { default: inquirer } = await import('inquirer');
+        const { default: ora } = await import('ora');
+        const { default: cliSpinners } = await import('cli-spinners');
+        this.ora = ora;
+        this.cliSpinners = cliSpinners;
         this.inquirer = inquirer;
         this.chalk = chalk;
     }
@@ -21,21 +25,37 @@ class Utility {
         this.outputMessage('Generate mock data files and service worker for your project', 'red');
         this.outputLineSpace(2);
     }
-
-
-    askUserOpenAiKeys() {
-        this.inquirer
+    askUserOpenAiPrompt() {
+        return this.inquirer
             .prompt([
                 {
                     type: 'text',
-                    name: 'apiKeys',
-                    message: 'Are you happy with the default data model? / if no we can use AI to generate some mock data',
-                    default: true
+                    name: 'prompt',
+                    message: 'Enter business model i.e. library management system: ',
                 }
             ])
             .then(answers => {
-                if (answers.generateMockData) {
-                    return true
+                if (answers.prompt) {
+                    return answers.prompt
+                }
+                else {
+                    return false
+                }
+            });
+    }
+
+    askUserOpenAiApiKey() {
+        return this.inquirer
+            .prompt([
+                {
+                    type: 'password',
+                    name: 'apiKey',
+                    message: 'Enter Open Ai API Key, key will not be stored: ',
+                }
+            ])
+            .then(answers => {
+                if (answers.apiKey) {
+                    return answers.apiKey
                 }
                 else {
                     return false
@@ -62,6 +82,13 @@ class Utility {
                     return false
                 }
             });
+    }
+
+    loadingSpinner() {
+        return this.ora({
+            text: 'Loading',
+            spinner: this.cliSpinners.dots
+        })
     }
 
     outputMessage(message, colour) {

@@ -1,0 +1,82 @@
+[
+  {
+    "id": 1,
+    "title": "Entry Ticket",
+    "price": 76.91,
+    "description": "Access to the event with advanced features.",
+    "image": "https://images.pexels.com/photos/47261/pexels-photo-47261.jpeg",
+    "category": "General Admission"
+  },
+  {
+    "id": 2,
+    "title": "VIP Ticket",
+    "price": 35.03,
+    "description": "Exclusive access with special privileges.",
+    "image": "https://images.pexels.com/photos/47262/pexels-photo-47262.jpeg",
+    "category": "VIP Experience"
+  },
+  {
+    "id": 3,
+    "title": "Backstage Pass",
+    "price": 32.98,
+    "description": "Get behind the scenes with this pass.",
+    "image": "https://images.pexels.com/photos/47263/pexels-photo-47263.jpeg",
+    "category": "Backstage Access"
+  },
+  {
+    "id": 4,
+    "title": "Meet and Greet Ticket",
+    "price": 32.51,
+    "description": "Meet your favorite artists in person.",
+    "image": "https://images.pexels.com/photos/47264/pexels-photo-47264.jpeg",
+    "category": "Artist Interaction"
+  },
+  {
+    "id": 5,
+    "title": "Workshop Pass",
+    "price": 21.52,
+    "description": "Attend exclusive workshops and sessions.",
+    "image": "https://images.pexels.com/photos/47265/pexels-photo-47265.jpeg",
+    "category": "Educational"
+  },
+  {
+    "id": 6,
+    "title": "Early Bird Ticket",
+    "price": 74.79,
+    "description": "Get early access to the event.",
+    "image": "https://images.pexels.com/photos/47266/pexels-photo-47266.jpeg",
+    "category": "Priority Entry"
+  },
+  {
+    "id": 7,
+    "title": "Group Ticket",
+    "price": 21.53,
+    "description": "Discounted ticket for groups of people.",
+    "image": "https://images.pexels.com/photos/47267/pexels-photo-47267.jpeg",
+    "category": "Group Discount"
+  },
+  {
+    "id": 8,
+    "title": "Family Pass",
+    "price": 30.3,
+    "description": "Entire family entry package.",
+    "image": "https://images.pexels.com/photos/47268/pexels-photo-47268.jpeg",
+    "category": "Family Fun"
+  },
+  {
+    "id": 9,
+    "title": "VIP Upgrade",
+    "price": 88.61,
+    "description": "Upgrade your experience to VIP level.",
+    "image": "https://images.pexels.com/photos/47269/pexels-photo-47269.jpeg",
+    "category": "Upgrade Option"
+  },
+  {
+    "id": 10,
+    "title": "Event Merchandise",
+    "price": 70.09,
+    "description": "Exclusive event merchandise.",
+    "image": "https://images.pexels.com/photos/47270/pexels-photo-47270.jpeg",
+    "category": "Memorabilia"
+  }
+]

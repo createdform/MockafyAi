@@ -1,0 +1,192 @@
+[
+  {
+    "id": 1,
+    "attendeeId": 4,
+    "date": "2024-05-24T04:56:39.872319",
+    "tickets": [
+      {
+        "ticketId": 6,
+        "quantity": 10
+      },
+      {
+        "ticketId": 4,
+        "quantity": 5
+      },
+      {
+        "ticketId": 3,
+        "quantity": 8
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "attendeeId": 5,
+    "date": "2023-12-06T03:25:18.212659",
+    "tickets": [
+      {
+        "ticketId": 3,
+        "quantity": 6
+      },
+      {
+        "ticketId": 9,
+        "quantity": 5
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "attendeeId": 2,
+    "date": "2023-09-20T13:24:57.584624",
+    "tickets": [
+      {
+        "ticketId": 7,
+        "quantity": 5
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "attendeeId": 4,
+    "date": "2024-03-07T19:00:31.298009",
+    "tickets": [
+      {
+        "ticketId": 6,
+        "quantity": 5
+      },
+      {
+        "ticketId": 4,
+        "quantity": 4
+      },
+      {
+        "ticketId": 10,
+        "quantity": 3
+      },
+      {
+        "ticketId": 8,
+        "quantity": 7
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "attendeeId": 2,
+    "date": "2023-10-06T11:12:15.406916",
+    "tickets": [
+      {
+        "ticketId": 2,
+        "quantity": 8
+      },
+      {
+        "ticketId": 5,
+        "quantity": 7
+      },
+      {
+        "ticketId": 4,
+        "quantity": 4
+      }
+    ]
+  },
+  {
+    "id": 6,
+    "attendeeId": 1,
+    "date": "2024-01-17T22:01:03.632472",
+    "tickets": [
+      {
+        "ticketId": 5,
+        "quantity": 7
+      }
+    ]
+  },
+  {
+    "id": 7,
+    "attendeeId": 1,
+    "date": "2023-08-10T07:13:05.543280",
+    "tickets": [
+      {
+        "ticketId": 7,
+        "quantity": 2
+      },
+      {
+        "ticketId": 10,
+        "quantity": 9
+      },
+      {
+        "ticketId": 7,
+        "quantity": 8
+      }
+    ]
+  },
+  {
+    "id": 8,
+    "attendeeId": 3,
+    "date": "2023-12-09T00:49:14.573751",
+    "tickets": [
+      {
+        "ticketId": 3,
+        "quantity": 2
+      },
+      {
+        "ticketId": 2,
+        "quantity": 8
+      },
+      {
+        "ticketId": 2,
+        "quantity": 7
+      },
+      {
+        "ticketId": 9,
+        "quantity": 6
+      }
+    ]
+  },
+  {
+    "id": 9,
+    "attendeeId": 5,
+    "date": "2024-02-26T21:24:34.291753",
+    "tickets": [
+      {
+        "ticketId": 8,
+        "quantity": 9
+      },
+      {
+        "ticketId": 4,
+        "quantity": 10
+      },
+      {
+        "ticketId": 2,
+        "quantity": 10
+      },
+      {
+        "ticketId": 5,
+        "quantity": 4
+      },
+      {
+        "ticketId": 2,
+        "quantity": 2
+      }
+    ]
+  },
+  {
+    "id": 10,
+    "attendeeId": 4,
+    "date": "2023-11-21T11:52:57.714426",
+    "tickets": [
+      {
+        "ticketId": 10,
+        "quantity": 4
+      },
+      {
+        "ticketId": 4,
+        "quantity": 7
+      },
+      {
+        "ticketId": 5,
+        "quantity": 4
+      },
+      {
+        "ticketId": 7,
+        "quantity": 6
+      }
+    ]
+  }
+]
